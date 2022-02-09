@@ -1,4 +1,4 @@
-# SQl Code that creates database Run this first
+# SQl Code that creates database and tables {Run this first}
 
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import create_engine
