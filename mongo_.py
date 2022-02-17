@@ -2,4 +2,17 @@
 # Mongo start
 # Mongo
 
-import mongoengine
+# Code that creates the Fields(Tables)
+
+from mongoengine import *
+
+
+class Information(Document):
+    location = StringField()
+    data = StringField()
+
+    def to_json(self):
+        return {
+            "location": self.location,
+            "data": self.data
+        }
