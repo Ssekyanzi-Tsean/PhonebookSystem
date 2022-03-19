@@ -1,21 +1,20 @@
+from post_alc import Phonedb
+from post_alc_usage import PostgresDatabase
 
-from sqlsystem import SqlDatabase
 
-
-class TestSqlDatabase:
-    database = SqlDatabase()
+class TestPostgresDatabase:
+    database = PostgresDatabase()
 
     def test_connect(self):
         output = self.database.connect()
-        expected = True, "-connecting to sql database"
+        expected = True, "-connecting to postgresql database"
         assert output == expected
 
     def test_disconnect(self):
         output = self.database.disconnect()
-        expected = True, "-Disconnecting from sql database"
+        expected = True, "-Disconnecting from postgresql database"
         assert output == expected
 
-    # @pytest.mark.skip(reason="")
     def test_create(self):
         location = "0772129076"
         name = "Andrew"
@@ -37,7 +36,6 @@ class TestSqlDatabase:
         assert output == expected
         cleanup = self.database.delete(location)
 
-    # @pytest.mark.skip(reason="")
     def test_update(self):
         location = "0772404987"
         phone = "0772404987"
