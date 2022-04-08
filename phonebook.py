@@ -1,4 +1,5 @@
 # Phonebook Code
+
 from dbi import DatabaseInterface
 from typing import Dict, Tuple
 
@@ -32,8 +33,9 @@ class PhoneBookSystem:
 
     def read_contact(self, data: dict) -> Tuple[bool, str, Dict[str, str]]:
         print("Viewing contact information")
-        location = data["phone"]
 
+        location = data["phone"]
+        print(location)
         read, reason, output = self.db.read(location)
         if not read:
             reason = "failed to read contact"
@@ -42,7 +44,7 @@ class PhoneBookSystem:
 
         reason = "Contact read successfully"
         print(reason)
-        return True, reason, data
+        return True, reason, output
 
     def update_contact(self, data: Dict[str, str]) -> Tuple[bool, str]:
         """Update method """
@@ -78,4 +80,7 @@ class PhoneBookSystem:
     def tear_down_system(self) -> None:
         print("Shutting down system")
         self.db.disconnect()
-        print("System shut down complete")
+        result = "System shut down complete"
+        return result
+
+        

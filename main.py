@@ -12,6 +12,7 @@ from post_alc_usage import PostgresDatabase
 #database_service = SqlDatabase()
 database_service = PostgresDatabase()
 
+
 phonebook_system = PhoneBookSystem(database_service)
 phonebook_system.set_up_system()
 
@@ -19,13 +20,14 @@ phonebook_system.set_up_system()
 name = "Sean"
 name2 = "Ssekyanzi"
 name3 = "Tchami"
-name4 = "Kagwa Samuel"
+name4 = "Kawanzi Andrew"
+name5 = "Opio Edmond"
 phone = "0701901797"
 phone2 = "0788901797"
 phone3 = "0790965797"
-phone4 = "0772404987"
+phone4 = "0709087655"
 
 #phonebook_system.create_contact({"name": name4, "phone": phone4})
-print(phonebook_system.read_contact({"name": name3, "phone": phone3}))
-#phonebook_system.update_contact({"name": name, "phone": phone})
-#phonebook_system.delete_contact({"name": name4, "phone": phone4})
+print(phonebook_system.read_contact({"name": name, "phone": phone}))
+#phonebook_system.update_contact({"name": name3, "phone": phone4})
+#phonebook_system.delete_contact({"name": name5, "phone": phone4})
