@@ -18,16 +18,14 @@ phonebook_system.set_up_system()
 
 
 name = "Sean"
-name2 = "Ssekyanzi"
-name3 = "Tchami"
-name4 = "Kawanzi Andrew"
-name5 = "Opio Edmond"
+name2 = "Tchami"
+name3 = "Maala"
 phone = "0701901797"
 phone2 = "0788901797"
-phone3 = "0790965797"
-phone4 = "0709087655"
+phone3 = "0745673655"
 
-#phonebook_system.create_contact({"name": name4, "phone": phone4})
-#print(phonebook_system.read_contact({"name": name, "phone": phone}))
-#phonebook_system.update_contact({"name": name3, "phone": phone4})
-#phonebook_system.delete_contact({"name": name5, "phone": phone4})
+
+#phonebook_system.create_contact({"name": name, "phone": phone})
+#print(phonebook_system.read_contact({"name": name3, "phone": phone}))
+#phonebook_system.update_contact({"name": name3, "phone": phone})
+phonebook_system.delete_contact({"name": name3, "phone": phone})
