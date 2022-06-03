@@ -1,7 +1,7 @@
 from dbi import DatabaseInterface
 from sqlalchemy import create_engine, engine, update
 from sqlalchemy.orm import sessionmaker
-from config import DATABASE_URI
+from config import DATABASE_URL
 import json
 from typing import Dict, Tuple
 from post_alc import Phonedb
