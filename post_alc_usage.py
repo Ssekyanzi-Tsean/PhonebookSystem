@@ -1,7 +1,7 @@
 from dbi import DatabaseInterface
 from sqlalchemy import create_engine, engine, update
 from sqlalchemy.orm import sessionmaker
-from config import DATABASE_URL
+from config import DATABASE_URI
 import json
 from typing import Dict, Tuple
 from post_alc import Phonedb
@@ -15,7 +15,7 @@ class PostgresDatabase(DatabaseInterface):
     def connect(self):
         reason = "-connecting to postgresql database"
 
-        engine = create_engine(DATABASE_URL)
+        engine = create_engine(DATABASE_URI)
         Session = sessionmaker(bind=engine)
         self.session = Session()
         print("Table Creation Complete")

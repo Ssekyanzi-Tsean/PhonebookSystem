@@ -1,4 +1,5 @@
-from config import DATABASE_URL
+from config import DATABASE_URI
+import psycopg2
 import os
 from sqlalchemy.orm import declarative_base, sessionmaker
 from sqlalchemy import Column, String, DateTime, Integer, create_engine, Date
@@ -9,7 +10,9 @@ connection_string = "sqlite:///"+os.path.join(BASE_DIR, 'migrant.db')
 
 Base = declarative_base()
 
-engine = create_engine(DATABASE_URL)
+engine = create_engine(DATABASE_URI)
+
+
 Session = sessionmaker(bind=engine)
 s = Session()
 
