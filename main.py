@@ -19,11 +19,11 @@ phonebook_system.set_up_system()
 
 name = "Sean"
 name2 = "Tchami"
-name3 = "Adam"
+name3 = "james"
 
 phone = "0701901797"
 phone2 = "0788901797"
-phone3 = "0745653612"
+phone3 = "0735653612"
 
 
 phonebook_system.create_contact({"name": name3, "phone": phone3})

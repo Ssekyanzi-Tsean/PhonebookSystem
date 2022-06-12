@@ -1,4 +1,4 @@
-from config import DATABASE_URI
+from config import DATABASE_URL
 import psycopg2
 import os
 from sqlalchemy.orm import declarative_base, sessionmaker
@@ -10,7 +10,7 @@ connection_string = "sqlite:///"+os.path.join(BASE_DIR, 'migrant.db')
 
 Base = declarative_base()
 
-engine = create_engine(DATABASE_URI)
+engine = create_engine(DATABASE_URL)
 
 
 Session = sessionmaker(bind=engine)
