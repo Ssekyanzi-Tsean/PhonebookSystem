@@ -37,6 +37,4 @@ jobs:
       - name: Test with pytest
         run: |
           pytest
-        name: Dburl
-        run:
-          echo ${{secrets.DATABASE_URL}}
+          {{secrets.DATABASE_URL}}
