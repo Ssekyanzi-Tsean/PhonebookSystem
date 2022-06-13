@@ -5,6 +5,8 @@ from config import DATABASE_URL
 import json
 from typing import Dict, Tuple
 from post_alc import Phonedb
+from dotenv import load_dotenv
+import os
 
 
 class PostgresDatabase(DatabaseInterface):
@@ -14,8 +16,8 @@ class PostgresDatabase(DatabaseInterface):
 
     def connect(self):
         reason = "-connecting to postgresql database"
-
-        engine = create_engine(DATABASE_URL)
+        load_dotenv()
+        engine = create_engine(os.getenv("DATABASE_URL"))
         Session = sessionmaker(bind=engine)
         self.session = Session()
         print("Table Creation Complete")
