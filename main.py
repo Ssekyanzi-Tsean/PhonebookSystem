@@ -26,7 +26,7 @@ phone2 = "0788901797"
 phone3 = "0735653612"
 
 
-phonebook_system.create_contact({"name": name3, "phone": phone3})
+phonebook_system.create_contact({"name": name2, "phone": phone2})
 #print(phonebook_system.read_contact({"name": name3, "phone": phone}))
 #phonebook_system.update_contact({"name": name3, "phone": phone})
 #phonebook_system.delete_contact({"name": name3, "phone": phone})
