@@ -44,7 +44,7 @@ class PostgresDatabase(DatabaseInterface):
             return(False, reason)
 
     def read(self, location: str) -> Tuple[bool, str, Dict[str, str]]:
-        """Reads in data in system"""
+        """Reads in data in systems"""
         print(f"-Reading data in {location} location")
         row = []
         try:
