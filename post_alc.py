@@ -1,9 +1,10 @@
-import dotenv
+from dotenv import load_dotenv
 import psycopg2
 import os
 from sqlalchemy.orm import declarative_base, sessionmaker
 from sqlalchemy import Column, String, DateTime, Integer, create_engine, Date
 
+load_dotenv()
 
 BASE_DIR = os.path.dirname(os.path.realpath(__file__))
 connection_string = "sqlite:///"+os.path.join(BASE_DIR, 'migrant.db')
